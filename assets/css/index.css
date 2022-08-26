@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+}
+
+
+.checkbox:checked ~ .actions button{
+  cursor: pointer;
+  opacity: 1;
+  pointer-events: all;
+
+
+}
+.checkbox:checked ~ .actions button:hover{
+  opacity: 0.8;
+}
+.checkbox{
+  position: absolute;
+}
+
+.d-none{
+  display: none;
+}
+.input.error input{
+  border : 1px solid red;
+}
+.input.success input{
+  border : 1px solid blue;
+}
+.input.error svg path {
+  fill: red;
+}
+.input.success svg path{
+  fill : blue;
+}
+
+.sign{
+  height: 100vh;
+  width: 90vw;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.sign__form{
+  min-height: 70vh;
+  max-width: 40rem;
+}
+.logo{
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: black;
+}
+.title{
+  font-size: 4.5rem;
+}
+.formulario{
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+.input{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+small{
+  color: red;
+  font-style: italic;
+  opacity: 0;
+}
+
+.input label{
+  color: #000;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.input input{
+  padding: 1.6rem 2rem;
+  border : 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+.input input::placeholder{
+  font-size: 1.5rem;
+  color: #ccc;
+}
+.terms{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.input-pass{
+  position: relative;
+}
+.input-pass svg{
+  width: 20px;
+  position: absolute;
+  bottom: 32px;
+  right: 10px;
+  opacity: 1;
+}
+
+.terms label{
+  font-weight: 500;
+  width: 80%;
+  margin-inline: auto;
+}
+.terms label > a{
+  font-weight: 700;
+  color: blue;
+}
+.actions{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+.actions button{
+  padding: 2rem 3.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  background-color: blue;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: not-allowed;
+  opacity: .5;
+  pointer-events: none;
+}
+
+.actions p{
+  font-weight: 500;
+}
+.actions p > a{
+  color: cornflowerblue;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+.actions p > a:hover{
+  text-decoration: underline;
+  color: blue;
+}
+
+/* Figure */
+
+.sign__figure{
+  background:linear-gradient(90deg ,blue 0%  ,blueviolet 50% , blue 100% );
+  text-align: center;
+  min-height: 70vh;
+  max-width: 60rem;
+  display: none;
+  flex-direction: column;
+  gap: 3rem;
+  padding-block: 10rem;
+  padding-inline: 4rem;
+  color: white;
+}
+
+.sign__figure img{
+  width: 100%;
+  border-radius: 0.4rem;
+  
+}
+.sign__figure .texts p{
+  padding-top: 0.5rem;
+  color: #ccc;
+}
+.sign__figure .circles{
+  margin-top: 1rem;
+  margin-inline: auto;
+  height: 20px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sign__figure .circles .circle{
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+  opacity: 0.8;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.sign__figure .circles .circle:nth-of-type(1){
+  color: white;
+  opacity: 1;
+}
+
+
+@media screen and (min-width:1200px) {
+
+  .sign{
+    max-width: 140rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+  }
+  .sign__form{
+    justify-self: center;
+  }
+  .sign__figure{
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    padding-inline: 20%;
+  }
+}
